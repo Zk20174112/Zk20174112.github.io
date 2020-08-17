@@ -1,2 +1,65 @@
 # Zk20174112.github.io
 个人博客
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/normailze.css"/>
+		<style type="text/css">
+			.box{
+				padding-top: 200px;
+				padding-left: 200px;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: #bfa;
+				border: 1px solid #000;
+				margin-bottom: 20px;
+			}
+			.box2{
+				width: 150px;
+				height: 30px;
+				display: flex;
+				position: relative;
+				flex: initial;
+				justify-content: space-between;
+			}
+			.box2 img{
+				width: 30px;
+				height: 30px;
+				border: 1px solid #000;
+				transition: all 0.5s;
+			}
+			.box2 img:hover{
+				transform: translateY(-2px);
+				box-shadow: 0 0 10px rgba(0,0,0,.3);
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img =document.querySelector('.box1 img')
+				var imgarr = document.querySelectorAll('.box2 img');
+				for(var i = 0;i < imgarr.length;i++){
+					imgarr[i].onclick=function(){
+						img.src=this.src
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">
+				<img src="../img/avengers/02.jpg" >
+			</div>
+			<div class="box2">
+				<img src="../img/avengers/02.jpg" >
+				<img src="../img/avengers/03.jpg" >
+				<img src="../img/avengers/04.jpg" >
+				<img src="../img/avengers/05.jpg" >
+			</div>
+		</div>
+	</body>
+</html>
